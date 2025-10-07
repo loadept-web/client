@@ -49,6 +49,8 @@ jobs:
           ssh -i ./private_key.pem $SERVER_USER@$SERVER_IP '
             cd /home/'$SERVER_USER'
             tar -xzf dist.tar.gz
-            mv dist /var/www/loadept
+            rm dist.tar.gz
+
+            sudo mv dist /var/www/loadept
             sudo systemctl restart nginx
           '
