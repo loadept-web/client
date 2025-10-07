@@ -34,6 +34,8 @@ jobs:
               exit 1
           fi
 
+          tar -czf dist.tar.gz dist
+
       - name: Upload to server
         env:
           SERVER_IP: ${{ secrets.SERVER_IP }}
@@ -43,8 +45,10 @@ jobs:
           echo "$SSH_PRIVATE_KEY" > private_key.pem
           chmod 600 private_key.pem
 
-          scp -o StrictHostKeyChecking=no -i ./private_key.pem loadept-web.tar.gz $SERVER_USER@$SERVER_IP:/home/$SERVER_USER
+          scp -o StrictHostKeyChecking=no -i ./private_key.pem dist.tar.gz  $SERVER_USER@$SERVER_IP:/home/$SERVER_USER
           ssh -i ./private_key.pem $SERVER_USER@$SERVER_IP '
+            cd /home/'$SERVER_USER'
+            tar -xzf dist.tar.gz
             mv dist /var/www/loadept
             sudo systemctl restart nginx
           '
