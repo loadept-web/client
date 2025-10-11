@@ -1,13 +1,16 @@
-import { render } from 'preact'
 import './index.css'
+import { render } from 'preact'
 import Router from 'preact-router'
 import { Header } from './core/components/header'
 import { Footer } from './core/components/footer'
-import { NotFound } from './pages/404'
-import { Index } from './pages'
-import { About } from './pages/about'
-import { Article } from './pages/article'
 import { DataProvider } from './core/providers/context'
+import {
+  NotFound,
+  Home,
+  About,
+  Article
+} from './pages'
+import ResourcesRouter from './pages/resources'
 
 const Main = () => {
   return (
@@ -15,9 +18,12 @@ const Main = () => {
       <Header />
       <main className='flex-grow mt-12'>
         <Router>
-          <Index path='/' element={<Index />} />
+          <Home path='/' element={<Home />} />
           <About path='/about' element={<About />} />
           <Article path='/articles/:category/:name' />
+
+          <ResourcesRouter path='/resources/:rest*' />
+
           <NotFound default />
         </Router>
       </main>
