@@ -4,7 +4,7 @@ import { Experience } from '../modules/about/components/experience'
 import { Description } from '../modules/about/components/description'
 import { useEffect } from 'preact/hooks'
 
-export const About = () => {
+const About = () => {
   useEffect(() => {
     document.title = 'Sobre mi - loadept'
   }, [])
@@ -20,3 +20,5 @@ export const About = () => {
     </div>
   )
 }
+
+export default About

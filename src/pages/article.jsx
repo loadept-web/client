@@ -1,10 +1,10 @@
 import { useContext, useEffect } from 'preact/hooks'
-import { BackArrow } from '../modules/article/components/back-arrow'
+import { BackArrow } from '../core/icons'
 import { MainContent } from '../modules/article/components/main-content'
 import { useContent } from '../modules/article/hooks/useContent'
 import { DataContext } from '../core/providers/dataContext'
 
-export const Article = ({ category, name }) => {
+const Article = ({ category, name }) => {
   const { content, meta } = useContent({ category, name })
   const { data } = useContext(DataContext)
 
@@ -14,8 +14,10 @@ export const Article = ({ category, name }) => {
 
   return (
     <div className='container mx-auto px-4 max-w-3xl mb-20'>
-      <BackArrow />
+      <BackArrow text='Volver al inicio' href='/' />
       <MainContent content={content} meta={meta} repo_url={data} />
     </div>
   )
 }
+
+export default Article

@@ -1,7 +1,7 @@
 export const FeedBackCard = ({ repo_url }) => {
   return (
-    <div className='mt-20 border-t border-[#3e4451] pt-8'>
-      <div className='bg-[#282c34] rounded-lg p-5'>
+    <div className='mt-20 pt-8'>
+      <div className='bg-[#282c34] rounded-lg p-5 border border-[#3e4451]'>
         <h3 className='text-md font-bold text-[#e5c07b] mb-4 flex items-center'>
           <span className='text-2xl mr-2 text-[#98c379]'></span>
           ¿Encontraste un error o tienes una sugerencia?

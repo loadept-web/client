@@ -1,3 +1,5 @@
+import { PageIndicator } from "../../../core/icons";
+
 export const Description = () => {
   const birthdate = new Date('2003-10-01T00:00:00')
   const currentDate = new Date()
@@ -21,10 +23,8 @@ export const Description = () => {
 
   return (
     <section className='space-y-3'>
-      <div className='flex items-center gap-3'>
-        <span className='text-3xl text-[#56b6c2]'></span>
-        <code className='text-[#c678dd]'>sobre-mí.go</code>
-      </div>
+      <PageIndicator title="sobre-mí.go" />
+
       <div className='space-y-4'>
         <h1 className='text-3xl font-bold text-[#e5c07b]'>
           Hola, soy <span className='text-[#61afef]'>Jesus</span>

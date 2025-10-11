@@ -1,7 +1,7 @@
 import { Link } from 'preact-router/match'
 import { useEffect } from 'preact/hooks'
 
-export const NotFound = () => {
+const NotFound = () => {
   useEffect(() => {
     document.title = '404 - Página no encontrada - loadept'
   }, [])
@@ -38,3 +38,5 @@ export const NotFound = () => {
     </div>
   )
 }
+
+export default NotFound

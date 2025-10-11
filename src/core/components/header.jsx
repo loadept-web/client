@@ -84,7 +84,9 @@ export const Header = () => {
           </Link>
         </li>
         <li className='hover:text-[#528bff] transition-colors'>
-          Recursos
+          <Link href='/resources' title='resources'>
+            Recursos
+          </Link>
         </li>
         <li className='hover:text-[#528bff] transition-colors'>
           Contacto
