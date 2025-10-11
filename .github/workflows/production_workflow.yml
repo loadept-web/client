@@ -51,6 +51,7 @@ jobs:
             tar -xzf dist.tar.gz
             rm dist.tar.gz
 
-            sudo mv dist /var/www/loadept
+            sudo cp -r dist /var/www/loadept
             sudo systemctl restart nginx
+            rm -rf dist
           '
