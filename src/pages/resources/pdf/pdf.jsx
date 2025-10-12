@@ -1,9 +1,19 @@
+import { useEffect, useState } from 'preact/hooks'
 import { Combine, Minimize2 } from 'lucide-react'
-import { useState } from 'preact/hooks'
 import { BackArrow } from '../../../core/icons'
 import { PdfCompressor } from '../../../modules/pdf/components/compressor'
 
 const Pdf = () => {
+  useEffect(() => {
+    document.title = 'Herramientas PDF - loadept'
+    const metaDescription = document.querySelector("meta[name='description']")
+    const metaOgDescription = document.querySelector("meta[property='og:description']")
+    if (metaDescription && metaOgDescription) {
+      metaDescription.setAttribute("content", "Comprime o une archivos PDF gratis, seguro y sin mantener archivos en el servidor.")
+      metaOgDescription.setAttribute("content", "Comprime o une archivos PDF gratis, seguro y sin mantener archivos en el servidor.")
+    }
+  }, [])
+
   const [mode, setMode] = useState("compress")
 
   return (

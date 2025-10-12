@@ -7,6 +7,18 @@ import { useEffect } from 'preact/hooks'
 const About = () => {
   useEffect(() => {
     document.title = 'Sobre mi - loadept'
+    const metaDescription = document.querySelector("meta[name='description']")
+    const metaOgDescription = document.querySelector("meta[property='og:description']")
+    if (metaDescription && metaOgDescription) {
+      metaDescription.setAttribute("content", `
+        Conoce un poco más sobre mí, quién está detrás de loadept.com, mi experiencia y mis
+        intereses en el desarrollo de software y la tecnología.
+      `)
+      metaOgDescription.setAttribute("content", `
+        Conoce un poco más sobre mí, quién está detrás de loadept.com, mi experiencia y mis
+        intereses en el desarrollo de software y la tecnología.
+      `)
+    }
   }, [])
 
   return (
