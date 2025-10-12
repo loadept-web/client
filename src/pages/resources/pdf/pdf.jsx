@@ -1,7 +1,7 @@
 import { Combine, Minimize2 } from 'lucide-react'
 import { useState } from 'preact/hooks'
 import { BackArrow } from '../../../core/icons'
-import { PdfCompressor } from '../../../modules/pdf/compressor'
+import { PdfCompressor } from '../../../modules/pdf/components/compressor'
 
 const Pdf = () => {
   const [mode, setMode] = useState("compress")
