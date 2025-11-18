@@ -1,4 +1,4 @@
-import { FileText, ImageIcon, Code2, Database, Lock } from 'lucide-react'
+import { FileText, ImageIcon, Database, Lock } from 'lucide-react'
 import { ResourceItem } from './resource-item'
 import { ResourceItemDisable } from './resource-item-disable'
 
@@ -9,7 +9,16 @@ const resources = [
     description: "Comprime y une archivos PDF de forma rápida y segura",
     Icon: FileText,
     color: "text-[#e06c75]",
-    href: "/resources/pdf",
+    href: "/pdf",
+    available: true,
+  },
+  {
+    id: "pg-mcp",
+    title: "PostgreSQL MCP",
+    description: "Servidor MCP para consultas PostgreSQL",
+    Icon: Database,
+    color: "text-[#61afef]",
+    href: "/pg-mcp",
     available: true,
   },
   {
@@ -18,7 +27,7 @@ const resources = [
     description: "Optimiza y comprime imágenes sin perder calidad",
     Icon: ImageIcon,
     color: "text-[#98c379]",
-    href: "/resources/image",
+    href: "/image",
     available: false,
   },
   {
@@ -27,7 +36,7 @@ const resources = [
     description: "Valida, formatea y transforma archivos JSON",
     Icon: Database,
     color: "text-[#c678dd]",
-    href: "/resources/json",
+    href: "/json",
     available: false,
   },
   {
@@ -36,7 +45,7 @@ const resources = [
     description: "Genera hashes y checksums para tus archivos",
     Icon: Lock,
     color: "text-[#56b6c2]",
-    href: "/resources/hash",
+    href: "/hash",
     available: false,
   },
 ]

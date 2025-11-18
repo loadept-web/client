@@ -8,7 +8,7 @@ import {
   NotFound,
   Home,
   About,
-  Article
+  Article,
 } from './pages'
 import ResourcesRouter from './pages/resources'
 
@@ -21,9 +21,7 @@ const Main = () => {
           <Home path='/' element={<Home />} />
           <About path='/about' element={<About />} />
           <Article path='/articles/:category/:name' />
-
-          <ResourcesRouter path='/resources/:rest*' />
-
+          <ResourcesRouter path='/:rest' />
           <NotFound default />
         </Router>
       </main>

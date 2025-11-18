@@ -1,7 +1,7 @@
 import { useEffect, useState } from 'preact/hooks'
 import { Combine, Minimize2 } from 'lucide-react'
-import { BackArrow } from '../../../core/icons'
-import { PdfCompressor } from '../../../modules/pdf/components/compressor'
+import { BackArrow } from '../../core/icons'
+import { PdfCompressor } from '../../modules/pdf/components/compressor'
 
 const Pdf = () => {
   useEffect(() => {
@@ -22,7 +22,7 @@ const Pdf = () => {
       <div className="space-y-8">
         <div className="space-y-4">
           <h1 className="text-3xl font-bold text-[#e5c07b]">Herramientas PDF</h1>
-          <p className="text-[#abb2bf]">Comprime o une archivos PDF directamente en tu navegador.</p>
+          <p className="text-[#abb2bf]">Comprime o une archivos PDF</p>
         </div>
 
         <div className="flex items-center space-x-2 bg-[#282c34] p-2 rounded-lg w-fit">

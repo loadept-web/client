@@ -4,7 +4,8 @@ import { Description } from '../../modules/resources/components/description'
 import { PrivacityAndSecurity } from '../../modules/resources/components/Priv&Sec'
 import { ResourceCard } from '../../modules/resources/components/resource-card'
 
-import Pdf from './pdf/pdf'
+import Pdf from './pdf'
+import PgMCP from './pg-mcp'
 
 const Resources = () => {
   useEffect(() => {
@@ -32,7 +33,8 @@ const ResourcesRouter = () => {
   return (
     <Router>
       <Resources path="/resources" />
-      <Pdf path="/resources/pdf" />
+      <Pdf path="/pdf" />
+      <PgMCP path='/pg-mcp' />
     </Router>
   )
 }
